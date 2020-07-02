@@ -14,13 +14,26 @@ a{
 	clear: both;
 }
 header{
+	position: relative;/* #socialの基準位置を相対位置へ変更する */ 
 	width: 90%;    /*横幅いっぱい*/
 	height: 15px 0;
 	margin: 15px auto;
 	text-align: center;
 }
+header, nav, h2, .main-visual, footer{
+	font-family: Chalkdester, "Bradley Hand", Courier, "Segoe print", sans-serif;
+}
 header .headline{
 	font-size: 32px;
+}
+.social{
+	position: absolute;/* .headerの左上を基準に絶対位置で指定する */ 
+	top: 22px;/* .headerの左上から22px下側へ移動する */ 
+	right: 22px;/* .headerの右上から22px左側へ移動する */
+}
+.social i{
+	display: inline-block;
+	margin-left: 20px;
 }
 .nav-list{
 	text-align: center;
@@ -103,7 +116,7 @@ main{
 	padding-top: 50px;
 	text-align: center;
 }
-.pagination-box{
+.pagination p{
 	width: 30px;
 	height: 30px;
 	display: inline-block;
@@ -172,4 +185,55 @@ footer{
 }
 .footer-text{
 	color: #fff;
+}
+@media screen and (max-width:425px) {
+  header {
+    width: 100%;
+  }
+  .nav-list {
+    width: 100%;
+  }
+  .nav-list-item {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  .social {
+    display: none;
+  }
+  .main-visual-content {
+    width: 100%;
+  }
+  main {
+    width: 100%;
+  }
+  .blog {
+    width: 100%;
+    margin: 0;
+  }
+  .blog-box {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .blog-image {
+    width: 49%;
+  }
+  .blog-text {
+    width: 49%;
+    padding-top: 5px;
+  }
+  .sidebar {
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .instagram-box {
+    width: 48%;
+    padding-top: 48%;
+  }
+  .instagram-box:nth-child(odd) {
+    margin-right: 4%;
+  }
+  .pagination { 
+    margin-bottom: 50px;
+  }
 }
